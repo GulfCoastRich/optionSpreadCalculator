@@ -1,39 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stock Option Spreads Calculator</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <h1>Options Spread Calculator</h1>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <header>
-        <label for="spread-selector">Select Option Strategy</label>
-        <select id="spread-selector">
-            <option>Long Call</option>
-            <option>Long Put</option>
-            <option>Bull Call Spread</option>
-            <option>Bear Put Spread</option>
-            <option>Bull Call Ladder Spread</option>
-            <option>Bear Put Ladder Spread</option>
-            <option>Long Straddle</option>
-            <option>Long Strangle</option>
-            <option>Strap Straddle</option>
-            <option>Strip Straddle</option>
-            <option>Strap Strangle</option>
-            <option>Strip Strangle</option>
-        </select>
-        <p id="strategy-description"></p>
+      <h1>Options Spread Calculator</h1>
     </header>
-    <section>
-         <div id="put-spread" class="modal"></div>
+    <div id="section-cont">
+      <section id="percentage-calculator" class="column left">
+        <h4 class="column-title">Percentage Calculator</h4>
+        <form>
+          <div class="input-cont">
+            <div class="percent-input-cont">
+              <label for="percent-of">What is</label>
+              <input id="percent-of" class="percent-input" type="text" />
+              <label for="percent-of-whole">% of</label>
+              <input id="percent-of-whole" class="percent-input" type="text" />
+              <div class="result-display"></div>
+            </div>
+            <div class="percent-input-cont">
+              <input id="is-percent-of" class="percent-input" type="text" />
+              <label for="is-percent-of-whole">is what % of</label>
+              <input
+                id="is-percent-of-whole"
+                class="percent-input"
+                type="text"
+              />
+              <div class="result-display"></div>
+            </div>
+            <div id="percent-increase-cont">
+              <div>
+                <p class="increase-decrease-header">
+                  What is the percentage increase or decrease
+                </p>
+              </div>
+              <div class="percent-input-cont">
+                <label for="percent-increase">From :</label>
+                <input
+                  id="percent-increase"
+                  class="percent-input"
+                  type="text"
+                />
+                <label for="percent-increase-of-whole">To :</label>
+                <input
+                  id="percent-increase-of-whole"
+                  class="percent-input"
+                  type="text"
+                />
+                <div id="last-percentage-result" class="result-display"></div>
+              </div>
+            </div>
+            <div class="percentage-btn-cont">
+              <button class="percentage-btn calculate-btn" type="submit">
+                Calculate
+              </button>
+              <button class="percentage-btn reset-btn" type="reset">
+                Reset
+              </button>
+            </div>
+          </div>
+        </form>
+      </section>
 
+      <section id="options-calculator" class="column middle">
+        <h4 class="column-title">Options Calculator</h4>
+        <div id="put-spread" class="modal">
+          <div class="type-selector">
+            <label for="spread-selector">Select Option Strategy</label>
+            <select id="spread-selector">
+              <option>Select Option Strategy</option>
+              <option>Long Call</option>
+              <option>Long Put</option>
+              <option>Bull Call Spread</option>
+              <option>Bear Put Spread</option>
+              <option>Bull Call Ladder Spread</option>
+              <option>Bear Put Ladder Spread</option>
+              <option>Long Straddle</option>
+              <option>Long Strangle</option>
+              <option>Strap Straddle</option>
+              <option>Strip Straddle</option>
+              <option>Strap Strangle</option>
+              <option>Strip Strangle</option>
+            </select>
+          </div>
         </div>
+      </section>
 
-    </section>
-       
-   
+      <section id="options-explanation" class="column right">
+        <h4 class="column-title">Option Spread Description</h4>
+        <div class="options-description">
+          <h3>Stock Options Spreads</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt quae
+            possimus corrupti perspiciatis! Similique tempore eligendi culpa
+            vero voluptatum repellendus! Nesciunt rerum iusto magnam obcaecati
+            recusandae repellat veritatis quae expedita!
+          </p>
+        </div>
+      </section>
+    </div>
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
