@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="This is a calculator for various different types of stock options spread strategies."
+    />
     <title>Stock Option Spreads Calculator</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -10,57 +14,128 @@
     <header>
       <h1>Options Spread Calculator</h1>
     </header>
-    <div id="section-cont">
+    <main id="section-cont">
       <section id="percentage-calculator" class="column left">
         <h4 class="column-title">Percentage Calculator</h4>
-        <form>
+        <form class="percentage-form">
           <div class="input-cont">
             <div class="percent-input-cont">
-              <label for="percent-of">What is</label>
-              <input id="percent-of" class="percent-input" type="text" />
-              <label for="percent-of-whole">% of</label>
-              <input id="percent-of-whole" class="percent-input" type="text" />
-              <div class="result-display"></div>
+              <span
+                ><label for="percent-of">What is</label>
+                <input
+                  id="percent-of"
+                  class="percent-input"
+                  type="text"
+                  name="percent"
+                />
+                <label for="percent-of-whole">% of</label>
+                <input
+                  id="percent-of-whole"
+                  class="percent-input"
+                  type="text"
+                  name="whole-number-one"
+                />
+              </span>
+              <div class="calc-cont">
+                <button
+                  id="calculate-percentage-btn"
+                  class="percentage-btn calculate-btn"
+                  type="submit"
+                >
+                  Calculate
+                </button>
+                <output
+                  id="first-percentage-result"
+                  class="percent-result-display"
+                ></output>
+                <button
+                  id="first--percentage-reset-btn"
+                  class="percentage-btn reset-btn"
+                  type="reset"
+                >
+                  Reset
+                </button>
+              </div>
             </div>
             <div class="percent-input-cont">
-              <input id="is-percent-of" class="percent-input" type="text" />
-              <label for="is-percent-of-whole">is what % of</label>
-              <input
-                id="is-percent-of-whole"
-                class="percent-input"
-                type="text"
-              />
-              <div class="result-display"></div>
+              <span
+                ><input
+                  id="is-percent-of"
+                  class="percent-input"
+                  type="text"
+                  name="amount"
+                />
+                <label for="is-percent-of-whole">is what % of</label>
+                <input
+                  id="is-percent-of-whole"
+                  class="percent-input"
+                  type="text"
+                  name="whole-number-two"
+                />
+              </span>
+               <div class="calc-cont">
+                <button
+                  id="second-percentage-calculate-btn"
+                  class="percentage-btn calculate-btn"
+                  type="submit"
+                >
+                  Calculate
+                </button>
+                <output
+                  id="second-percentage-result"
+                  class="percent-result-display"
+                ></output>
+                <button
+                  id="second-percentage-reset-btn"
+                  class="percentage-btn reset-btn"
+                  type="reset"
+                >
+                  Reset
+                </button>
+              </div>
             </div>
             <div id="percent-increase-cont">
               <div>
-                <p class="increase-decrease-header">
-                  What is the percentage increase or decrease
-                </p>
+                <p class="increase-decrease-header">Increase/Decrease</p>
               </div>
               <div class="percent-input-cont">
-                <label for="percent-increase">From :</label>
-                <input
-                  id="percent-increase"
-                  class="percent-input"
-                  type="text"
-                />
-                <label for="percent-increase-of-whole">To :</label>
-                <input
-                  id="percent-increase-of-whole"
-                  class="percent-input"
-                  type="text"
-                />
-                <div id="last-percentage-result" class="result-display"></div>
+                <span
+                  ><label for="percent-increase-from">From :</label>
+                  <input
+                    id="percent-increase-from"
+                    class="percent-input"
+                    type="text"
+                    name="from"
+                  />
+                  <label for="percent-increase-to">To :</label>
+                  <input
+                    id="percent-increase-to"
+                    class="percent-input"
+                    type="text"
+                    name="to"
+                  />
+                </span>
+                 <div class="calc-cont">
+                <button
+                  id="third-percentage-calculate-btn"
+                  class="percentage-btn calculate-btn"
+                  type="submit"
+                >
+                  Calculate
+                </button>
+                <output
+                  id="third-percentage-result"
+                  class="percent-result-display"
+                ></output>
+                <button
+                  id="third-percentage-reset-btnn"
+                  class="percentage-btn reset-btn"
+                  type="reset"
+                >
+                  Reset
+                </button>
               </div>
-            </div>
-            <div class="percentage-btn-cont">
-              <button class="percentage-btn calculate-btn" type="submit">
-                Calculate
-              </button>
-              <button class="percentage-btn reset-btn" type="reset">
-                Reset
-              </button>
+              </div>
             </div>
           </div>
         </form>
@@ -102,7 +177,7 @@
           </p>
         </div>
       </section>
-    </div>
+    </main>
 
     <script src="script.js"></script>
   </body>
