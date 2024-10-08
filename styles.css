@@ -43,6 +43,10 @@ header {
   width: 50%;
 }
 
+.column-title {
+    text-align: center;
+}
+
 .percentage-form,
 .options-description,
 .modal {
@@ -77,6 +81,7 @@ header {
   height: 25px;
   border: 2px solid blue;
   border-radius: 5px;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.6);
 }
 
 .percent-result-display {
