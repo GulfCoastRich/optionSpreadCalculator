@@ -44,7 +44,7 @@ header {
 }
 
 .column-title {
-    text-align: center;
+  text-align: center;
 }
 
 .percentage-form,
@@ -61,7 +61,7 @@ header {
 }
 
 .percentage-form {
-    font-weight: 800;
+  font-weight: 800;
 }
 
 .input-cont {
@@ -113,7 +113,6 @@ header {
   bottom: 10px;
   border-radius: 10px;
   color: white;
-  
 }
 
 .calculate-btn {
@@ -122,11 +121,68 @@ header {
 }
 
 .reset-btn {
-  background-color: rgb(100,100,100);
-   box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.6);
+  background-color: rgb(100, 100, 100);
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.6);
 }
 
 /* Beginning of Options Calculator */
+.modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.type-selector {
+  margin: 15px auto;
+}
+
+.options-header {
+  display: flex;
+  gap: 70px;
+}
+
+.option-stock-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.options-header-input {
+  width: 70px;
+  height: 20px;
+  border: 2px solid blue;
+}
+
+table {
+  margin: 30px auto;
+}
+
+.options-input {
+  width: 70px;
+  height: 20px;
+  background-color: white;
+  border: 2px solid blue;
+}
+
+.option-leg {
+  display: flex;
+  gap: 15px;
+}
+
+.options-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.options-col p {
+  text-align: center;
+}
+
+.leg-total {
+  position: relative;
+  bottom: 10px;
+}
 
 /* Beginning of Options Description */
 

@@ -73,7 +73,7 @@
                   name="whole-number-two"
                 />
               </span>
-               <div class="calc-cont">
+              <div class="calc-cont">
                 <button
                   id="second-percentage-calculate-btn"
                   class="percentage-btn calculate-btn"
@@ -115,26 +115,26 @@
                     name="to"
                   />
                 </span>
-                 <div class="calc-cont">
-                <button
-                  id="third-percentage-calculate-btn"
-                  class="percentage-btn calculate-btn"
-                  type="submit"
-                >
-                  Calculate
-                </button>
-                <output
-                  id="third-percentage-result"
-                  class="percent-result-display"
-                ></output>
-                <button
-                  id="third-percentage-reset-btnn"
-                  class="percentage-btn reset-btn"
-                  type="reset"
-                >
-                  Reset
-                </button>
-              </div>
+                <div class="calc-cont">
+                  <button
+                    id="third-percentage-calculate-btn"
+                    class="percentage-btn calculate-btn"
+                    type="submit"
+                  >
+                    Calculate
+                  </button>
+                  <output
+                    id="third-percentage-result"
+                    class="percent-result-display"
+                  ></output>
+                  <button
+                    id="third-percentage-reset-btnn"
+                    class="percentage-btn reset-btn"
+                    type="reset"
+                  >
+                    Reset
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -161,13 +161,114 @@
               <option>Strap Strangle</option>
               <option>Strip Strangle</option>
             </select>
-            <form id="options-calculator-form">
-              <section class="options-calc-cont">
-                
-
-              </section>
-            </form>
           </div>
+           <h3>Call Spread</h3>
+          <div class="options-header">
+            <div class="option-stock-info">
+              <label for="stock-ticker">Stock Ticker</label>
+              <input id="stock-ticker" class="options-header-input" type="text" min="1" step="1" />
+            </div>
+            <div class="option-stock-info">
+              <label for="stock-price">Stock Price</label>
+              <input id="stock-price" class="options-header-input" type="number" min="1" step="1" />
+            </div>
+            <div class="option-stock-info">
+              <label for="stock-closing-price">Stock Price at Expiry</label>
+              <input id="stock-closing-price" class="options-header-input" type="number" min="1" step="1" />
+            </div>
+          </div>
+          <table>
+            <form id="options-calculator-form">
+              <tr class="option-leg">
+                <td class="options-col">
+                  <label for="long-strike">Strike Price</label>
+                  <input
+                    id="long-strike"
+                    class="options-input"
+                    type="number"
+                    min="1"
+                    step="1"
+                  />
+                </td>
+                <td class="options-col">
+                  <label for="long-qty">Quantity</label>
+                  <input
+                    id="long-qty"
+                    class="options-input"
+                    type="number"
+                    min="1"
+                    step="1"
+                  />
+                </td>
+                <td class="options-col">
+                  <label for="long-cost">Cost</label>
+                  <input
+                    id="long-cost"
+                    class="options-input"
+                    type="number"
+                    min="1"
+                    step="1"
+                  />
+                </td>
+                <td class="options-col">
+                  <label for="long-intrinsic-value">Intrinsic Value</label>
+                  <p id="long-intrinsic-value" class="leg-total">$0.00</p>
+                </td>
+                <td class="options-col">
+                  <label for="long-leg-total-cost">Total Cost</label>
+                  <p id="long-leg-total-cost" class="leg-total">$0.00</p>
+                </td>
+                <td class="options-col">
+                  <label for="long-leg-p&l">Long P&L</label>
+                  <p id="long-leg-p&l" class="leg-total">$0.00</p>
+                </td>
+              </tr>
+              <tr class="option-leg">
+                <td class="options-col">
+                  <label for="short-strike">Strike Price</label>
+                  <input
+                    id="short-strike"
+                    class="options-input"
+                    type="number"
+                    min="1"
+                    step="1"
+                  />
+                </td>
+                <td class="options-col">
+                  <label for="short-qty">Quantity</label>
+                  <input
+                    id="long-qty"
+                    class="options-input"
+                    type="number"
+                    min="1"
+                    step="1"
+                  />
+                </td>
+                <td class="options-col">
+                  <label for="short-cost">Credit</label>
+                  <input
+                    id="short-cost"
+                    class="options-input"
+                    type="number"
+                    min="1"
+                    step="1"
+                  />
+                </td>
+                <td class="options-col">
+                  <label for="short-intrinsic-value">Intrinsic Value</label>
+                  <p id="short-intrinsic-value" class="leg-total">$0.00</p>
+                </td>
+                <td class="options-col">
+                  <label for="short-leg-total-cost">Total Cost</label>
+                  <p id="short-leg-total-cost" class="leg-total">$0.00</p>
+                </td>
+                <td class="options-col">
+                  <label for="short-leg-p&l">Short P&L</label>
+                  <p id="short-leg-p&l" class="leg-total">$0.00</p>
+                </td>
+              </tr>
+            </form>
+          </table>
         </div>
       </section>
 
