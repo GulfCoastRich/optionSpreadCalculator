@@ -184,6 +184,12 @@ table {
   bottom: 10px;
 }
 
+.input-cont output {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Beginning of Options Description */
 
 .options-description h3 {

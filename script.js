@@ -34,7 +34,7 @@ const thirdPercentResetBtn = document.getElementById(
 );
 
 //Spread Calculator Variables
-const spreadSelector = document.getElementByIdById("spread-selector");
+const spreadSelector = document.getElementById("spread-selector");
 
 const checkUserInputForNumbers = (input) => {
   if (
@@ -48,31 +48,42 @@ const checkUserInputForNumbers = (input) => {
 };
 
 const getNumberFromPercentage = (num) => {
-  return toFixed(num / 100);
+  isPercentOf.value = toFixed(num / 100);
 };
 
 const getWhatIsPercentOfNumber = () => {
-  let num1 = parseInt(getNumberFromPercentage(isPercentOf.value));
+  let num1 = parseInt(getNumberFromPercentage);
   let num2 = parseInt(isPercentOfWhole.value);
 
-  return num1 * num2;
+  firstPercentageResult.innerHTML =  num1 * num2;
 };
 
 const getIsWhatPercentOfNumber = () => {
   let num1 = parseInt(isPercentOf.value);
   let num2 = parseInt(isPercentOfWhole.value);
-  return num1 / num2;
+  secondPercentageResult.innerHTML =  ((num1 / num2)*100) + "%";
 };
 
 const getPercentChange = () => {
   let num1 = parseInt(percentIncreaseFrom.value);
   let num2 = parseInt(percentIncreaseTo.value);
   if(num1 = num2){
-    return "0%"
+    thirdPercentageResult.innerHTML = "0%";
   }
   if (num1 > num2) {
-    return ((num1 - num2) / num1) * 100;
+    thirdPercentageResult.innerHTML = ((num1 - num2) / num1) * 100;
   } else if (num1 < num2) {
-    return ((num2 - num1) / num1) * 100;
+    thirdPercentageResult.innerHTML = ((num2 - num1) / num1) * 100;
   }
+  
+  console.log("Num 1 = " + num1);
+  console.log("Num 2 = " + num2);
+  
+
 };
+
+
+firstPercentCalculateBtn.addEventListener("click", getWhatIsPercentOfNumber);
+secondPercentCalculateBtn.addEventListener("click", getIsWhatPercentOfNumber);
+thirdPercentCalculateBtn.addEventListener("click", getPercentChange)
+  
