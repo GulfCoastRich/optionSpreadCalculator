@@ -36,24 +36,14 @@ const thirdPercentResetBtn = document.getElementById(
 //Spread Calculator Variables
 const spreadSelector = document.getElementById("spread-selector");
 
-const checkUserInputForNumbers = (input) => {
-  if (
-    !input.value ||
-    isNaN(parseInt(input.value)) ||
-    parseInt(input.value) < 0
-  ) {
-    alert("Please provide a number greater than zero.");
-    return;
-  }
-};
 
-const getNumberFromPercentage = (num) => {
-  isPercentOf.value = toFixed(num / 100);
-};
 
+//Percentages Functions
 const getWhatIsPercentOfNumber = () => {
-  let num1 = parseInt(getNumberFromPercentage);
-  let num2 = parseInt(isPercentOfWhole.value);
+  const num1 = parseInt(percentOf.value) / 100;
+  const num2 = parseInt(percentOfWhole.value);
+  console.log("Num1 = " + num1);
+  console.log("Num2 = " + num2);
 
   firstPercentageResult.innerHTML =  num1 * num2;
 };
@@ -75,15 +65,22 @@ const getPercentChange = () => {
   } else if (num1 < num2) {
     thirdPercentageResult.innerHTML = ((num2 - num1) / num1) * 100;
   }
-  
-  console.log("Num 1 = " + num1);
-  console.log("Num 2 = " + num2);
-  
-
 };
 
 
 firstPercentCalculateBtn.addEventListener("click", getWhatIsPercentOfNumber);
 secondPercentCalculateBtn.addEventListener("click", getIsWhatPercentOfNumber);
-thirdPercentCalculateBtn.addEventListener("click", getPercentChange)
+thirdPercentCalculateBtn.addEventListener("click", getPercentChange);
   
+firstPercentResetBtn.addEventListener("click", () => {
+
+  firstPercentageResult.innerText = " ";
+} );
+
+secondPercentResetBtn.addEventListener("click", () => {
+  secondPercentageResult.innerText = " ";
+});
+
+thirdPercentResetBtn.addEventListener("click", () => {
+  thirdPercentageResult.innerText = " ";
+});
